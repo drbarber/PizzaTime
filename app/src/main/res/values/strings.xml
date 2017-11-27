@@ -88,7 +88,7 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_generated_pizza">GeneratedPizza</string>
     <string name="pizza_near_you">Pizza Near You</string>
-    <string name="save_this_pizza">Save This Pizza</string>
+    <string name="save_this_pizza">Re-Generate</string>
     <string name="title_activity_settings_page">SettingsPage</string>
     <string name="generatedPizzaText" > </string>
     <string name="settings">Settings</string>

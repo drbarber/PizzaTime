@@ -18,6 +18,7 @@ import java.util.List;
 public class GeneratedPizza extends AppCompatActivity {
     private TextView generatedPizzaList;
     private int toppingNumber;
+    List<Topping> toppings;
 
 
     public void updateView(){
@@ -33,7 +34,7 @@ public class GeneratedPizza extends AppCompatActivity {
         toppingNumber = intent.getIntExtra("toppingNumber", 0);
         DatabaseHandler db = new DatabaseHandler(this);
 
-        List<Topping> toppings = db.getAllToppings();
+         toppings = db.getAllToppings();
         dbSetup(db);
 
         generatedPizzaList = (TextView) findViewById(R.id.generatedPizzaText);
@@ -101,6 +102,10 @@ public class GeneratedPizza extends AppCompatActivity {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         startActivity(mapIntent);
+    }
+
+    public void renewPizza(View view){
+        generatePizzaList(generatedPizzaList, toppings, toppingNumber);
     }
 
     public void settingsPage(View v){

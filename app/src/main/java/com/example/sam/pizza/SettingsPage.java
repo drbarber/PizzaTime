@@ -54,6 +54,7 @@ public class SettingsPage extends AppCompatActivity {
     }
 
 
+
     public void deleteTopping(View view) {
         String item = toppingSpinner.getSelectedItem().toString();
         DatabaseHandler db = new DatabaseHandler(getApplicationContext());
